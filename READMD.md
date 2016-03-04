@@ -1,4 +1,6 @@
-# Goals
+# Electronic Life: Java Edition
+​
+## Project Goals
 ​
 - Use Inheritance
 - Use polymorphism
@@ -11,28 +13,32 @@
   - use getters where needed
   - use setters where needed
 ​
-# Create the following
+## Create the following
 ​
-abstract Entity class
-  -has field size, large or small
-  - has field isDead
-  - has a field isSleeping boolean.
-  - has a field weight that is an int.
-  - has an abstract method eat().
-    - takes in entity as param
-    - increases weight by 1/10th weight of entity eaten
-    - other entity eaten dies.
-  - has an abstract method sleep.
-    - sets sleep to true;
-  - has an abstract method poop.
-    - weight decreases by 1
-  - has an abstract method act.
-    - cant act if dead
-    - if isSleeping 50% chance of waking up.
-    - doesn't do anything if it is sleeping
-    - randomly will either eat, sleep or poop;
-  - has an abstract method die.
-    - set isdead to true
+### Entity class
+  - Is an abstract class
+  - Has a field named size of type String
+    - String "large" or "small" as possible values.
+    - Bonus: enum for size field.
+  - Has a field named isDead of type boolean.
+  - Has a field named isSleeping of type boolean.
+  - Has a field named weight of type int.
+  - Has a method eat().
+    - Has one parameter of type Entity
+    - Increases weight by 1/10th weight of Eaten entity.
+    - Eaten entity dies.
+  - Has a method sleep.
+    - Sets isSleeping to true;
+  - Has a method poop.
+    - Decreases weight by 1/10th.
+    - If weight is zero Entity dies.
+  - Has a method act.
+    - Does nothing if isDead.
+    - Does nothing if isSleeping.
+    - If isSleeping it has of 50% chance of waking up.
+    - Randomly will either eat(), sleep() or poop();
+  - Has a method die.
+    - set isDead to true.
 ​
 abstract class cat subclasses entity
 abstract class dog subclasses entity
